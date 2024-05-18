@@ -88,7 +88,7 @@ class _HomeState extends State<Home> {
       children: [
         ListTile(
           title: Text(
-            "Books",
+            "Books for you",
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
