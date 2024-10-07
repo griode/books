@@ -36,16 +36,16 @@ class _StartState extends State<Start> {
                       )
                     ],
                   ),
-                  const SizedBox(height: 64),
+                  const SizedBox(height: 28),
                   const Text(
                     "Choose your goals",
                     style: TextStyle(
                       fontSize: 72,
                       fontWeight: FontWeight.bold,
-                      height: 0,
+                      height: 1,
                     ),
                   ),
-                  const SizedBox(height: 64),
+                  const SizedBox(height: 28),
                 ],
               ),
             ),
@@ -56,18 +56,20 @@ class _StartState extends State<Start> {
                 }),
                 children: [
                   // cinema
-                  Wrap(
-                    key: firstPageKey,
-                    spacing: 12,
-                    runSpacing: 16,
-                    alignment: WrapAlignment.center,
-                    children: topics["cinema"]!
-                        .map((e) => TopicButton(
-                              text: e,
-                              activate: _topicsChooses.contains(e),
-                              onTap: _nextHome,
-                            ))
-                        .toList(),
+                  SingleChildScrollView(
+                    child: Wrap(
+                      key: firstPageKey,
+                      spacing: 12,
+                      runSpacing: 16,
+                      alignment: WrapAlignment.center,
+                      children: topics["cinema"]!
+                          .map((e) => TopicButton(
+                                text: e,
+                                activate: _topicsChooses.contains(e),
+                                onTap: _nextHome,
+                              ))
+                          .toList(),
+                    ),
                   ),
                 ],
               ),

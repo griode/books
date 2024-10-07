@@ -35,8 +35,8 @@ class _DetailBookState extends State<DetailBook> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AspectRatio(
-              aspectRatio: 1.5,
+            SizedBox(
+              height: 260,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -78,7 +78,7 @@ class _DetailBookState extends State<DetailBook> {
                             "Emotions",
                             widget.book.emotion,
                             Icons.emoji_objects_outlined,
-                          ),
+                          )
                         ]),
                   ),
                 ],
@@ -100,6 +100,7 @@ class _DetailBookState extends State<DetailBook> {
               style:
                   Theme.of(context).textTheme.bodyMedium!.copyWith(height: 2),
             ),
+            const SizedBox(height: 120),
           ],
         ),
       ),
@@ -120,8 +121,9 @@ class _DetailBookState extends State<DetailBook> {
       child: Container(
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(16)),
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(16),
+        ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
